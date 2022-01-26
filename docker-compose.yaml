@@ -2,8 +2,8 @@ version: "3.8"
 services:
   app:
     build: 
-      context: .
-      dockerfile : app/Dockerfile.dockerfile
+      context: app
+      dockerfile : Dockerfile.dockerfile
     command: npm start
     ports:
       - "3000:3000"

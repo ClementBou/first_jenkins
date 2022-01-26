@@ -1,7 +1,9 @@
 version: "3.8"
 services:
   web:
-    build: ./my-app
+    build: 
+      context: .
+      dockerfile : ./app/Dockerfile.Dockerfile
+    command: npm start
     ports:
       - "3000:3000"
-    restart: on-failure

@@ -4,8 +4,11 @@ pipeline {
     stages {
         stage('NPMBuild') {
             steps {
-                sh'npm install'
-                sh'npm start'
+                sh '''
+                export PATH=/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin/
+                npm install
+                npm start
+                '''
             }
         }
     }

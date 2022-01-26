@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('NPMBuild') {
             steps {
-                echo 'Hello'
+                sh 'docker-compose up .'
             }
         }
     }
